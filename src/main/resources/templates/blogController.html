@@ -8,11 +8,11 @@
 <body>
 <header th:insert="blocks/header :: header"></header>
 <div class="container mt-5">
-    <h1>site blog</h1>
+    <h1>Site blog</h1>
     <div th:each="el : ${users}" class="alert alert-info mt-2">
         <h3 th:text="${el.title}"/>
         <p th:text="${el.anons}"/>
-        <a th:href="'/blog'+${el.id}">Details</a>
+        <a th:href="'/blog/'+${el.id} "class="btn  btn-warning">Details</a>
 
 
 
