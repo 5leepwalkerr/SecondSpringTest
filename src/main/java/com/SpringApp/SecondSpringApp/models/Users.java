@@ -15,7 +15,14 @@ import org.hibernate.annotations.Generated;
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long Id;
     private String title,anons,fullText;
     private int views;
+
+    public Users(String title, String anons, String fullText) {
+        this.title = title;
+        this.anons = anons;
+        this.fullText = fullText;
+    }
 }
